@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="styles.css" rel="stylesheet">
-  <script defer src="game.js"></script>
-  <title>Text Adventure</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script defer src="assets/js/game.js"></script>
+    <script defer src="assets/js/effects.js"></script>
+    <title>Viking Adventure</title>
 </head>
 <body>
-
-    <div class="row">
-        <div class="col">
-            <div class="choice-container">
-                <p id="dialogue">
-                    Insert dialogue here.
-                </p>
+    <div class="game-container">
+        <nav class="navbar">
+            <div>
+                <ul class="nav">
+                    <button type="button" data-toggle="modal" data-target="#warningModal" class="btn btn-primary">Main Menu</button>
+                    <button type="button" data-toggle="modal" data-target="#helpModal" class="btn btn-primary">Help</button>
+                </ul>
+            </div>
+        </nav>
+        <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="warningModalLabel">Are you sure?</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>If you leave the game, you will lose your current progress.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Game</button>
+                        <button type="link" class="btn btn-primary" onclick="window.location.href='index.html'">Return to Main Menu</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-  <div class="row">
-    <div class="col">
-        <div class="choice-container">
-            <div id="choice">What will you do?</div>
+        <div class="row dialogue-box">
+            <div class="col" id="dialogue">
+                <p id="dialogue-text">Insert dialogue here.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col image-screen">
+                <img src="assets/images/background.gif" width="800px" height="526px" alt="High Council Scene">
+            </div>
+        </div>
+        <div class="row">
+            <div class="choice-container">
+                <div id="choice">What will you do?</div>
                 <div id="option-buttons" class="button-grid">
                     <button class="btn">Option 1</button>
                     <button class="btn">Option 2</button>
@@ -33,5 +61,7 @@
             </div>
         </div>
     </div>
-</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script></body>
 </html>

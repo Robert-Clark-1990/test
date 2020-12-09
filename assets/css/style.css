@@ -1,0 +1,274 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: "VT323", 'Courier New', Courier, monospace;
+    font-size: 120%;
+    color: white;
+}
+
+body {
+    padding-top: 50px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1919;
+}
+
+.container {
+    padding: 0;
+}
+
+a {
+    background-color: #5c1622;
+    border: #3d0d16;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    outline: none;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #8a1d31;
+    color: white;
+    font-size: 100%;
+    text-decoration: none;
+    transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out; 
+    -moz-transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+}
+
+/* ----------------------------------------------- Home Page */
+
+.start-help-buttons{
+    position: relative;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.title-screen {
+    padding: 0;
+}
+
+/*------------------------------------------------ Intro / Help page */
+
+.intro-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    position: absolute;
+    top: 20%;
+    margin: 20px, 20px, 20px, 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 45%;
+    width: 80%;
+    max-width: 750px;
+    height: 400px;
+    text-align: center;
+    text-shadow: 2px 2px #1a1919;
+    overflow: scroll;
+}
+
+.intro-container {
+    max-width: 800px;
+}
+
+/* ----------------------------------------------- Game Page */
+
+.game-container {
+    max-width: 800px;
+}
+
+/* Navbar */
+
+nav {
+    background-color: #5c1622;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+ul {
+    width: 100%;
+    background-color: #5c1622;
+}
+
+button.btn.btn-primary {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Exit Modal */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 20%;
+}
+
+.modal-content {
+    background-color: #333333;
+    font-size: 80%;
+}
+
+/* Dialogue Box */
+
+.dialogue-box {
+    position: fixed;
+    top: 150px;
+    width: 90vw;
+    max-width: 700px;
+    max-height: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #333333;
+    padding: 0;
+    border-radius: 5px; 
+    z-index: 5;
+    font-size: 100%;
+    overflow: scroll;
+}
+
+#dialogue {
+    padding: 10px;
+    
+}
+
+/* Image Screen */
+
+.row .image-screen {
+    background-size: contain;
+    width: 100%;
+    z-index: -1;
+}
+
+img {
+    width:100%; 
+}
+
+/* Choices and Inventory */
+
+#choice {
+    font-size: 80%;
+    text-align: center;
+}
+
+.choice-container {
+    z-index: 1;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+    height: 100px;
+}
+
+.btn {
+    background-color: #5c1622;
+    border: #3d0d16;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #8a1d31;
+    color: white;
+    transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out; 
+    -moz-transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+}
+
+/* Media Queries used to keep all text within the game screen */
+
+@media (min-width: 992px) {
+    
+    .dialogue-box {
+        top: 25%;
+        max-height: 150px;
+        font-size: 80%;
+    }
+
+    .intro-text {
+        top: 25%;
+        height: 33%;
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .dialogue-box {
+        font-size: 80%;
+        width: 90vw;
+        max-width: 700px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    p {
+        font-size: 100%;
+    }
+
+    .intro-text {
+        top: 25%;
+        height: 35%;
+        width: 80%;
+        overflow: scroll;
+    }
+
+    .dialogue-box {
+    top: 200px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .intro-text {
+        top: 35%;
+        height: 20%;
+        width: 80%;
+        max-width: 400px;
+        overflow: scroll;
+    }
+
+    a {
+        font-size: 80%;
+    }
+
+    .dialogue-box {
+    top: 30%;
+    height: 80px;
+    width: 90vw;
+    font-size: 70%;
+    }
+
+    .start-help-buttons{
+        bottom: 50px;
+        font-size: 70%;
+    }
+
+}
